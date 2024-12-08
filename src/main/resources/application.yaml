@@ -1,0 +1,15 @@
+#spring.application.name=mercado-livro
+
+spring:
+    jpa:
+      hibernate:
+        ddl-auto: update
+    datasource:
+      url: jdbc:mysql://localhost:3306/mercadolivro?createDatabaseIfNotExist=true
+      username: root
+      password: root12345
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+    flyway:
+      locations: classpath:db/migration
+      baseline-on-migrate: true
